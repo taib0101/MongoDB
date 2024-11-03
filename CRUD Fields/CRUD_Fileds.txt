@@ -1,0 +1,59 @@
+
+1. Create Field
+
+** now create by insertOne
+products> db.collection.insertOne(
+            {
+		unique_id: "1",
+	 	type: "Car",
+	 	name: "BMW",
+	 	wheel: 4,
+	 	price: 12000
+	    }
+	 )
+	 
+** now create by insertMany
+products> db.collection.insertMany([
+		   {
+			unique_id: "2",
+			type: "Car",
+			name: "Honda",
+			wheel: 2,
+			price: 13000,
+			nickname: "bro" // inserted extra fields
+		   },
+		   {
+			unique_id: "3",
+			type: "Bike",
+			name: "BMW",
+			wheel: 2,
+			price: 14000
+		   },
+		   {
+			unique_id: "4",
+			type: "Bike",
+			name: "Honda",
+			wheel: 4,
+			price: 15000
+		   }
+	     ])
+	     
+2. Read Field
+
+products> db.collection.findOne({ type: "Bike" }).type
+
+3. Update Field
+
+products> db.collection.updateMany( 
+			{ type: "Car" }, 
+			{ $set: { name: "Hondaa", type: "Bike" } } 
+		)
+		
+4. Delete Fields
+
+** deleting specific fields
+
+products> db.collection.updateMany( 
+			{ nickname: "bro" }, 
+			{ $unset: { nickname: "" } } // you can unset or delete multiple fields
+		)

@@ -1,0 +1,32 @@
+
+1. Create Collection
+
+products> db.createCollection("collection1") // creating collection manually
+
+products> db.collection.insertOne(
+            {
+		unique_id: "1",
+	 	type: "Car",
+	 	name: "BMW",
+	 	wheel: 4,
+	 	price: 12000
+	    }
+	 ) // it automatically create collection
+	 
+2. Read Collection
+
+products> show collections
+
+products> db.getCollectionNames()
+
+products> db.getCollection("collection")
+
+3. Update Collection
+
+products> db.collection.renameCollection("newCollection")
+
+4. Delete Collection
+
+products> db.newCollection.drop()
+
+

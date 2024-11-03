@@ -1,0 +1,11 @@
+Data Types
+MongoDB supports a variety of data types that allow for flexibility and complexity.
+
+String: Commonly used for text data, e.g., "name": "Alice".
+Number: Stores integers and floating-point numbers, e.g., "age": 30.
+Boolean: Represents true or false, e.g., "isActive": true.
+Date: Stores date and time, often used for timestamps.
+Array: A list of values, e.g., "hobbies": ["reading", "travelling"].
+Object: Stores embedded documents (nested objects), e.g., "address".
+ObjectId: A 12-byte unique identifier for each document, assigned by default to _id.
+Null: Represents the absence of a value.

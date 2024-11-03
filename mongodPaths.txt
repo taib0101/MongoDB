@@ -1,0 +1,24 @@
+# /usr/share/doc/mongodb-mongosh
+# /usr/share/doc/mongodb-org-server
+# /usr/lib/mongodb-compass
+# /run/user/1000/systemd/transient/app-gnome-mongodb
+# /home/murtaza/.mongodb
+# /sys/fs/cgroup/system.slice/mongod.service
+
+# dpkg's
+# /var/lib/dpkg/info/mongodb-org-server.postinst
+# /var/lib/dpkg/info/mongodb-org-server.list
+# /var/lib/dpkg/info/mongodb-mongosh.md5sums
+# /var/lib/dpkg/info/mongodb-compass.md5sums
+# /var/lib/dpkg/info/mongodb-org-server.conffiles
+# /var/lib/dpkg/info/mongodb-compass.list
+# /var/lib/dpkg/info/mongodb-org-server.md5sums
+# /var/lib/dpkg/info/mongodb-org-server.prerm
+# /var/lib/dpkg/info/mongodb-mongosh.list
+# /var/lib/dpkg/info/mongodb-org-server.postrm
+ 
+# /var/lib/mongodb
+# /var/lib/mongodb/mongod.lock
+# /var/log/mongodb/mongod.log
+
+# configure mongod.conf file ->  /etc/mongod.conf

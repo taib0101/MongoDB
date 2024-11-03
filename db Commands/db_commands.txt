@@ -1,0 +1,103 @@
+db.__proto__                  db.constructor
+db.hasOwnProperty             db.isPrototypeOf
+db.propertyIsEnumerable       db.toLocaleString
+db.toString                   db.valueOf
+db.getMongo                   db.getName
+db.getCollectionNames         db.getCollectionInfos
+db.runCommand                 db.adminCommand
+db.aggregate                  db.getSiblingDB
+db.getCollection              db.dropDatabase
+db.createUser                 db.updateUser
+db.changeUserPassword         db.logout
+db.dropUser                   db.dropAllUsers
+db.auth                       db.grantRolesToUser
+db.revokeRolesFromUser        db.getUser
+db.getUsers                   db.createCollection
+db.createEncryptedCollection  db.createView
+db.createRole                 db.updateRole
+db.dropRole                   db.dropAllRoles
+db.grantRolesToRole           db.revokeRolesFromRole
+db.grantPrivilegesToRole      db.revokePrivilegesFromRole
+db.getRole                    db.getRoles
+db.currentOp                  db.killOp
+db.shutdownServer             db.fsyncLock
+db.fsyncUnlock                db.version
+db.serverBits                 db.isMaster
+db.hello                      db.serverBuildInfo
+db.serverStatus               db.stats
+db.hostInfo                   db.serverCmdLineOpts
+db.rotateCertificates         db.printCollectionStats
+db.getProfilingStatus         db.setProfilingLevel
+db.setLogLevel                db.getLogComponents
+db.commandHelp                db.listCommands
+db.sql                        db.newDatabasecollection1
+db.collection
+
+
+#--------------------------------------------------------------------------
+# db.collection commands
+
+db.collection.__proto__
+db.collection.constructor
+db.collection.hasOwnProperty
+db.collection.isPrototypeOf
+db.collection.propertyIsEnumerable
+db.collection.toLocaleString
+db.collection.toString
+db.collection.valueOf
+db.collection.aggregate
+db.collection.bulkWrite
+db.collection.countDocuments
+db.collection.deleteMany
+db.collection.deleteOne
+db.collection.distinct
+db.collection.estimatedDocumentCount
+db.collection.find
+db.collection.findOne
+db.collection.renameCollection
+db.collection.findOneAndDelete
+db.collection.findOneAndReplace
+db.collection.findOneAndUpdate
+db.collection.insertMany
+db.collection.insertOne
+db.collection.isCapped
+db.collection.replaceOne
+db.collection.updateMany
+db.collection.updateOne
+db.collection.compactStructuredEncryptionData
+db.collection.convertToCapped
+db.collection.createIndexes
+db.collection.createIndex
+db.collection.ensureIndex
+db.collection.getIndexes
+db.collection.getIndexSpecs
+db.collection.getIndices
+db.collection.getIndexKeys
+db.collection.dropIndexes
+db.collection.dropIndex
+db.collection.totalIndexSize
+db.collection.getDB
+db.collection.getMongo
+db.collection.dataSize
+db.collection.storageSize
+db.collection.totalSize
+db.collection.drop
+db.collection.exists
+db.collection.getFullName
+db.collection.getName
+db.collection.runCommand
+db.collection.explain
+db.collection.stats
+db.collection.latencyStats
+db.collection.initializeOrderedBulkOp
+db.collection.initializeUnorderedBulkOp
+db.collection.getPlanCache
+db.collection.validate
+db.collection.hideIndex
+db.collection.unhideIndex
+db.collection.getSearchIndexes
+db.collection.createSearchIndex
+db.collection.createSearchIndexes
+db.collection.dropSearchIndex
+db.collection.updateSearchIndex
+

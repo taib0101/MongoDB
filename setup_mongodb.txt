@@ -1,0 +1,32 @@
+1. First Download 3 .deb file
+main link: https://www.mongodb.com/try/download
+* mongodb-org-server_8.0.3_amd64.deb and link:
+https://www.mongodb.com/try/download/community and goto navbar "MongoDB Community Editin/MongoDB Community Server"
+
+* mongodb-mongosh_2.3.2_amd64.deb and link:
+https://www.mongodb.com/try/download/tools and goto navbar "Tools/MongoDB Shell"
+
+* mongodb-compass_1.44.5_amd64.deb and link
+https://www.mongodb.com/try/download/compass and goto navbar "Tools/MongoDB Compass (GUI)"
+
+2. install thoose .deb files
+$ sudo dpkg -i [].deb
+
+3. active and enable mongodb by systemctl
+$ sudo systemctl start mongod.service
+$ sudo systemctl enable mongod.service
+$ sudo systemctl status mongod.service
+
+4 goto terminal give this command
+$ mongosh
+
+
+Error:
+----------------------------------------------
+1. systemctl status shows this error " Active: failed (Result: exit-code)"
+* solution:
+$ sudo chown -R mongodb:mongodb /var/lib/mongodb
+$ sudo chown mongodb:mongodb /tmp/mongodb-27017.sock
+
+** Note: it was my limited error , you can get more . if you get error don't ask anyone. try yourself
+** Happy Solving

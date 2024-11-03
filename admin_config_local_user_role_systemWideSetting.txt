@@ -1,0 +1,12 @@
+# after creating new Connection of server it give default databases like "admin", "config", "local"
+
+1. admin: It refers an administrative database. It contains single or multiple "user", "role", "system-wide"
+2. config: It holds "configuration data" of "distributed collection" for "multiple server".
+3. local: It stores specific data like "replication information" for replica sets. but it dosen't share personal data to other server.
+
+* user: It refers for accounts in mongodb with specific permission.The user is responsible for authentication.
+   ** types of user: super user (admin, config, local), database-specific-adminUser(products, customer)
+* role: sets of permission of user can selected role for actions.The role defines the authorization of the user.
+* system-widesetting: enable sharding for applying globally to mongodb cluster
+
+** you can use user role by creating user for authentication and authorization. see my authentication_authorization.txt

@@ -1,0 +1,92 @@
+							Relational Database Management System - SQL
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		column -> filed
+		-----------------------------------------------------------------
+row -> document	|   unique_id   |    type    |   name    |   wheel  |   price   |
+		-----------------------------------------------------------------
+		|	1       |    "Car"   |  "BMW"    |    4     |   12000   |
+		-----------------------------------------------------------------
+		|       2       |    "Car"   |  "Honda"  |    2     |   13000   |
+		-----------------------------------------------------------------
+		|       3       |    "Bike"  |  "Honda"  |    2     |   14000   |
+		-----------------------------------------------------------------
+		|       4       |    "Bike"  |  "BMW"    |    4     |   15000   |
+		-----------------------------------------------------------------
+		table -> productsCollection <- collection
+
+
+
+                                                        Non Relational Database Management System - NoSQL  
+------------------------------------------------------------------------------------------------------------------------------------------------------
+// newConnections :-> "mongodb://127.0.0.1:3090/productsDatabase"
+
+// Database :-> productDatabase
+
+// collection -> productsCollection
+{
+   // documents
+   {
+	// fields
+	unique_id: "1",
+	type: "Car",
+	name: "BMW",
+	wheel: 4,
+	price: 12000
+   },
+   {
+        // fields
+        unique_id: "2",
+        type: "Car",
+        name: "Honda",
+        wheel: 2,
+        price: 13000
+   },
+   {
+        // fields
+        unique_id: "3",
+        type: "Bike",
+        name: "BMW",
+        wheel: 2,
+        price: 14000
+   },
+   {
+        // fields
+        unique_id: "4",
+        type: "Bike",
+        name: "Honda",
+        wheel: 4,
+        price: 15000
+   }
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Definations:
+
+1. newConnectionServer: It refers to create a new server connection giving host,
+port, user, password and authentication database. every new connection are
+server who holds databases like "admin", "config", "local", "application database". 
+we can create new connection using mongo compass or mongosh.
+
+** To know thoose admin, config, local's more information, 
+** see admin_config_local_user_role_systemWideSetting.txt
+** if you want to create new connection as server with authetication
+** got /etc/mongod.conf file "security: authorization:enabled"
+** and give this command "$ sudo systemctl [restart|start] mongod.service"
+
+*** to create new Connection with new host as ip and port, follow
+*** my mongodSecondaryConfigureFile.txt
+**** goto mongo compass add URL to connection "+"
+
+2. database: It refers a default database as "admin, config, local"  
+and custom database as "products, which_you_give_as_name" 
+** types of database: Administrative database(admin, config, local),
+** Application database (products, customers)
+** System database (logs, analytics)
+
+3. collecton: It refers information of documents and fileds. It is like a table on a page
+
+4. document: It refers data of fileds. It is like row.
+
+5. field: It refers specific value. It is like column

@@ -1,0 +1,59 @@
+1. mongosh . // it shows a demo mongodb
+$ mongosh
+
+2. mongosh [URL|options]
+-------------------------
+# Basic Local Connection
+mongosh "mongodb://<hostname>:<port>" 
+or 
+$ mongosh --host localhost --port 27017 . // 27017 is default port, **you can change thoose as remote host and custom port
+
+or
+
+# Connecting to a Specific Database without authentication
+mongosh "mongodb://<hostname>:<port>/<database>"
+or
+$ mongosh --host localhost --port 27017 --database admin
+
+or
+
+# Connect to a Specific MongoDB Instance and Authenticated Connection
+mongosh "mongodb://<username>:<password>@<hostname>:<port>/<database>"
+or
+$ mongosh -u taibUser -p 1234 --host localhost --port 27017 --authenticationDatabase admin // -u for user -p for password
+
+or
+
+# Connect to a Specific MongoDB Instance with database
+mongosh "mongodb://<username>:<password>@<host>:<port>/<adminDatabase>" --authenticationDatabase produts
+
+or
+
+# Replica Set Connection
+mongosh "mongodb://<host1>:<port1>,<host2>:<port2>,<host3>:<port3>/?replicaSet=<replicaSetName>"
+
+# Connection with SSL/TLS Encryption
+mongosh "mongodb://<host>:<port>/?ssl=true&tlsAllowInvalidCertificates=true"
+
+# Advanced Options (Connection Timeout)
+mongosh "mongodb://<host>:<port>/?serverSelectionTimeoutMS=5000"
+
+# Summary of Options:
+# Host and Port: mongodb://<host>:<port>
+# Authentication: mongodb://<username>:<password>@<host>:<port>
+# Replica Set: mongodb://<host1>:<port1>,<host2>:<port2>,<host3>:<port3>/?replicaSet=<replicaSetName>
+# SSL: mongodb://<host>:<port>/?ssl=true
+# Database Selection: mongodb://<host>:<port>/<database>
+
+** if you want to set custom port , goto mongod.conf file at /etc/mongod.conf
+** at /etc/mongod.conf update custom port from default port
+-----------------------
+| net:		      |
+|  port: 3090         |
+|#  port: 27017       |
+|  bindIp: 127.0.0.1  |
+-----------------------
+** give this command " $ sudo systemctl restart mongod.service"
+$ mongosh "mongodb://localhost:3090" or "mongodb://127.0.0.1:3090"
+
+

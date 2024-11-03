@@ -1,0 +1,78 @@
+db.createUser({
+  user: "taib",
+  pwd: "1234",
+  roles: [
+    { role: "root", db: "admin" },
+    { role: "read", db: "admin" },
+    { role: "readWrite", db: "admin" },
+    { role: "readAnyDatabase", db: "admin" }
+    { role: "dbAdmin", db: "admin" },
+    { role: "dbOwner", db: "admin" },
+    { role: "userAdmin", db: "admin" },
+    { role: "dbAdminAnyDatabase", db: "admin" },
+    { role: "userAdminAnyDatabase", db: "admin" },
+    { role: "clusterAdmin", db: "admin" },
+    { role: "hostManager", db: "admin" },
+    { role: "__system", db: "admin" },
+    { role: "__queryableBackup", db: "admin" },
+    { role: "clusterMonitor", db: "admin" },
+    { role: "directShardOperations", db: "admin" },
+    { role: "clusterManager", db: "admin" },
+    { role: "enableSharding", db: "admin" },
+    { role: "readWriteAnyDatabase", db: "admin" },
+    { role: "restore", db: "admin" },
+    { role: "backup", db: "admin" },
+  ],
+  mechanisms: ["SCRAM-SHA-256"],
+  customData: {
+    email: "analyst@example.com",
+    department: "Finance"
+  }
+})
+
+db.createUser({
+  user: "productsAdmin",
+  pwd: "securePassword123",
+  roles: [
+    { role: "read", db: "products" },
+    { role: "readWrite", db: "products" },
+    { role: "dbAdmin", db: "products" },
+    { role: "dbOwner", db: "products" },
+    { role: "userAdmin", db: "products" }
+    { role: "enableSharding", db: "products" },
+  ],
+  mechanisms: ["SCRAM-SHA-256"], // Optional: Specify authentication mechanisms
+  customData: {
+    email: "admin@example.com"
+})
+
+{
+   {
+	unique_id: "1",
+	type: "Car",
+	name: "BMW",
+	wheel: 4,
+	price: 12000
+   },
+   {
+        unique_id: "2",
+        type: "Car",
+        name: "Honda",
+        wheel: 2,
+        price: 13000
+   },
+   {
+        unique_id: "3",
+        type: "Bike",
+        name: "BMW",
+        wheel: 2,
+        price: 14000
+   },
+   {
+        unique_id: "4",
+        type: "Bike",
+        name: "Honda",
+        wheel: 4,
+        price: 15000
+   }
+}

@@ -1,0 +1,86 @@
+1. Create Database or switch
+
+test> use products // use products for create switch
+products> show dbs
+# output:
+| admin 180.00 KiB
+| config 48.00 KiB
+| local  88.00 KiB
+** it still didn't create because you didn't create a collection
+
+
+** now create by insertOne
+products> db.collection.insertOne(
+            {
+		unique_id: "1",
+	 	type: "Car",
+	 	name: "BMW",
+	 	wheel: 4,
+	 	price: 12000
+	    }
+	 )
+	 
+** now create by insertMany
+products> db.collection.insertMany([
+		   {
+			unique_id: "2",
+			type: "Car",
+			name: "Honda",
+			wheel: 2,
+			price: 13000
+		   },
+		   {
+			unique_id: "3",
+			type: "Bike",
+			name: "BMW",
+			wheel: 2,
+			price: 14000
+		   },
+		   {
+			unique_id: "4",
+			type: "Bike",
+			name: "Honda",
+			wheel: 4,
+			price: 15000
+		   }
+	     ])
+
+
+2. Read Database:
+
+products> show dbs
+# output:
+| admin 180.00 KiB
+| config 48.00 KiB
+| local  88.00 KiB
+| products 72.00 KiB
+** now it show the products database, because it created by insertOne() or insertMany()
+
+products> db
+# output: products
+
+3. Update Database:
+
+products> db.collection.updateMany( 
+			{ type: "Car", name: "Honda" }, 
+			{ $set: { name: "Hondaa" } } 
+		)
+		
+products> db.collection.updateMany( 
+			{ type: "Car" }, 
+			{ $set: { name: "Hondaa" } } 
+		)
+		
+products> db.collection.updateOne(
+			{ type: "Car" },
+			{ $set: { name: "Ferari" } }
+		)
+		
+** rename Database name
+let collection = db.getCollectionNames()
+collection.forEach((collectionValue) => db[collectionValue].aggregate([ { $match: {} }, { $out: "newDatabase" + collectionValue } ] ))
+		
+4. Delete Database:
+
+products> db.dropDatabase("products")
+		

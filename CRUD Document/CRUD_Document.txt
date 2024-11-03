@@ -1,0 +1,90 @@
+
+1. Create Document
+
+** now create by insertOne
+products> db.collection.insertOne(
+            {
+		unique_id: "1",
+	 	type: "Car",
+	 	name: "BMW",
+	 	wheel: 4,
+	 	price: 12000
+	    }
+	 )
+	 
+** now create by insertMany
+products> db.collection.insertMany([
+		   {
+			unique_id: "2",
+			type: "Car",
+			name: "Honda",
+			wheel: 2,
+			price: 13000
+		   },
+		   {
+			unique_id: "3",
+			type: "Bike",
+			name: "BMW",
+			wheel: 2,
+			price: 14000
+		   },
+		   {
+			unique_id: "4",
+			type: "Bike",
+			name: "Honda",
+			wheel: 4,
+			price: 15000
+		   }
+	     ])
+
+2. Read Document
+
+** read document with find
+products> db.collection.find();
+
+** read document with find and pretty
+products> db.collection.find().pretty()
+
+** read document with find by query
+products> db.collection.find({ type: "Car", name: "Honda" }).pretty() or db.collection.find({ type: "Car" }).pretty() 
+
+** read document with find by query but not to see type and name field
+products> db.collection.find({ type: "Car", name: "Honda" }, { type: 0, name: 0 }).pretty()
+
+** read document with find by query and limit
+products> db.collection.find({ type: "Car", name: "Honda" }).pretty().limit(1)
+
+** read document with find by query, limit, skip. skip means it will skip first few documents 
+products> db.collection.find({ type: "Car" }, { name: 0 }).pretty().limit(1).skip(1)
+
+** read document with find by query. Note: findOne doesn't support pretty()
+products> db.collection.findOne({ type: "Bike" })
+
+** read document with find by query and loop
+products> db.collection.find({ type: "Bike" }).forEach(value => print(value))
+products> db.collection.find({ type: "Bike" }).forEach(value => print("values", value))
+
+3. Update Document
+
+products> db.collection.updateMany( 
+			{ type: "Car", name: "Honda" }, 
+			{ $set: { name: "Hondaa" } } 
+		)
+		
+products> db.collection.updateMany( 
+			{ type: "Car" }, 
+			{ $set: { name: "Hondaa" } } 
+		)
+		
+products> db.collection.updateOne(
+			{ type: "Car" },
+			{ $set: { name: "Ferari" } }
+		)
+
+
+4. Delete Document
+
+** it will find and delete
+products> db.collection.deleteOne({ type: "Bike", name: "Honda" }) or db.collection.deleteOne({ type: "Bike" })
+
+products> db.collection.deleteMany({ type: "Car" })

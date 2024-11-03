@@ -1,0 +1,16 @@
+1. Authentication: Identify all user who can connect to database is called Authentication.
+
+2. Authorization: Basically restricted actions for authenticated users, that can perform any operations in database, is called Authorization.
+
+** Authentication happens for user , Authorization happens for authenticate user's actions. Thoose are happen in every server for each database.
+** Better practice is creating user for admin database 
+
+**note : MongoDB's clients can authenticate themeselve, when authorization is enabled.
+** $ sudo nano /etc/mongo.conf
+
+----------------------------
+| security:		   |
+|   authorization: enabled |
+| 			   |
+----------------------------
+press ctrl+s , ctrl+x
