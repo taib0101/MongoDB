@@ -1,0 +1,5 @@
+projects> db.collection.find({
+		budget: { $mod: [2, 0] }
+	})
+	
+explaination: "budget: { $mod: [2, 0] }" means budget will divided by 3 and result of mod will 0 

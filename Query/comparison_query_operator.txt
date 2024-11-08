@@ -1,0 +1,14 @@
+$eq: Equal to Operator
+$lt: Less Than Operator
+$lte: Less Than or Equal Operator
+$gt: Greater Than Operator
+$gte: Greater Than or Equal Operator
+$ne: Not Equal to Operator
+$in: In Operator
+$nin: Not In Operator
+
+
+
+projects> db.collection.find({ price: { $lte: 13000 } }) // same for "$eq, $lt, $gt, $gte, $ne"
+
+projects> db.collection.find({ wheel: { $in: [2, 4] } }) // it give output, inside wheel fields value contain 4 and 2. same as $nin

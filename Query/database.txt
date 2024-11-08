@@ -1,0 +1,30 @@
+[
+   {
+	unique_id: "1",
+	type: "Car",
+	name: "BMW",
+	wheel: 4,
+	price: 12000
+   },
+   {
+        unique_id: "2",
+        type: "Car",
+        name: "Honda",
+        wheel: 2,
+        price: 13000
+   },
+   {
+        unique_id: "3",
+        type: "Bike",
+        name: "BMW",
+        wheel: 2,
+        price: 14000
+   },
+   {
+        unique_id: "4",
+        type: "Bike",
+        name: "Honda",
+        wheel: 4,
+        price: 15000
+   }
+]

@@ -1,0 +1,16 @@
+# skip and limit
+projects> db.collection.find({ name: "BMW" }).skip(1).limit(1)
+
+# count of row or document
+projects> db.collection.find().count("name")
+or
+projects> db.collection.find().count()
+
+# sort
+projects> db.collection.find().sort({ price: -1 }) // descending order
+db.collection.find().sort({ price: 1 }) // ascending order
+
+# distinct
+projects> db.collection.distinct("name")
+
+

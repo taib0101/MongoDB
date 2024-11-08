@@ -1,0 +1,59 @@
+# collection 
+[
+   {
+	unique_id: "1",
+	type: "Car",
+	name: "BMW",
+	wheel: 4,
+	price: 12000,
+	bool: "bro"
+   },
+   {
+        unique_id: "2",
+        type: "Car",
+        name: "Honda",
+        wheel: 2,
+        price: 13000,
+        bool: "cro"
+   },
+   {
+        unique_id: "3",
+        type: "Bike",
+        name: "BMW",
+        wheel: 2,
+        price: 14000
+   },
+   {
+        unique_id: "4",
+        type: "Bike",
+        name: "Honda",
+        wheel: 4,
+        price: 15000
+   }
+]
+
+# operators are
+1. $exists: true|false // when we insert schema less document in mongodb, like fields are null for some documents, see above collection
+
+projects> db.collection.find({ bool: { $exists: true } })
+projects> db.collection.find({ bool: { $exists: false } })
+
+2. $type
+Type		Number	Alias
+Double		1	"double"
+String		2	"string"
+Object		3	"object"
+Array		4	"array"
+Binary data	5	"binData"
+ObjectId	7	"objectId"
+Boolean		8	"bool"
+Date		9	"date"
+Null		10	"null"
+Regex		11	"regex"
+32-bit integer	16	"int"
+Timestamp	17	"timestamp"
+64-bit integer	18	"long"
+Decimal128	19	"decimal"
+# type like number 1 to 19 represents the types . number 1 as double
+
+projects> db.collection.find({ name: { $type: 2 } })

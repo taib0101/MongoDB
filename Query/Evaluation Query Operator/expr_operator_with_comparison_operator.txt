@@ -1,0 +1,8 @@
+projects> db.collection.find({
+		$expr: {
+			$lt: ["budget", "spent"]
+		}
+	})
+
+// it means it will compare two fields of current document
+// to see more details go Query/comparison_query_operator.txt

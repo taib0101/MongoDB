@@ -1,0 +1,3 @@
+projects> db.collection.find({
+		category: { $regex: "[f|d|c]+[r|o]+" }
+	})

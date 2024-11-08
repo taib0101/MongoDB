@@ -1,0 +1,18 @@
+$and: Logical AND Operator
+$or: Logical OR Operator
+$nor: Logical NOR Operator
+
+projects> db.collection.find( { $and: [ 
+		    { name: { $eq: "BMW" } },
+		    { price: { $lt: 20000 } }
+            ] } ) // same as "$and, $or, $not, $nor"
+
+
+# $nor Operator:
+// it will return documents that do not match any of the conditions in the array
+//  it will return documents where name is not "BMW" and price is not less than 20000. !( name === "BMW" && price < 20000 )
+projects> db.collection.find( { $nor: [ 
+		    { name: { $eq: "BMW" } },
+		    { price: { $lt: 20000 } }
+            ] } ) 
+
