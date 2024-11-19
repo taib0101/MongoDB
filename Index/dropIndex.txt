@@ -1,0 +1,6 @@
+collection> db.collation.dropIndex("fieldName")
+                        or
+            db.collation.dropIndex({ email: 1 });
+            // default index doesn't delete
+
+collection> db.collection.dropIndexes() // it will drop all custom index accept default index.

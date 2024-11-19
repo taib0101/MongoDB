@@ -1,0 +1,38 @@
+    [
+        {
+            _id: 'd4e98a426eb54e3869580471f6d2f9e4',
+            email: 'rakib@gmail.com',
+            firstName: 'rakib',
+            lastName: 'islam',
+            mobile: '017777777777',
+            password: '$2b$10$sgQNbgkr.dJ0Qn7.vLBK9eNTGjWc/xRjWwmrrCc4YpiYf29ZEbyMW',
+            createdDate: '11/19/2024, 4:12:30 AM'
+        },
+        {
+            _id: 'add687c4e02a8bb00759235426bc0b09',
+            email: 'taib@gmail.com',
+            firstName: 'taib',
+            lastName: 'bro',
+            mobile: '017777777777',
+            password: '$2b$10$NmSEEjmxABYH9XIjnNraruhKqXuINMLlenmzAOVWJlUIoo9kQtizm',
+            createdDate: '11/19/2024, 4:13:41 AM'
+        },
+        {
+            _id: '6dee39ebc511b0f6dffe60e735e7de22',
+            email: 'mahi@gmail.com',
+            firstName: 'mahi',
+            lastName: 'bro',
+            mobile: '017777777777',
+            password: '$2b$10$83xOT9kwhsiLZE2INdyQP.9U3Qnw0DSadTaM2HU4AxY24xQsZmxTO',
+            createdDate: '11/19/2024, 4:14:01 AM'
+        },
+        {
+            _id: 'cf45f01754ced109a62ffb81c50a4d42',
+            email: 'akib@gmail.com',
+            firstName: 'akib',
+            lastName: 'bro',
+            mobile: '017777777777',
+            password: '$2b$10$VNUh5jETld8nSyrEy/JLI.c2u8CCNMOsa6R/wM8yC2QILlm2BHRQ2',
+            createdDate: '11/19/2024, 4:14:56 AM'
+        }
+    ]

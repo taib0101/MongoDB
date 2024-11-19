@@ -1,0 +1,15 @@
+# for custom index 
+collection> db.collection.createIndex({ email: [1|-1]},<options>) // 1 is for ascending and -1 is for descending order. there more see createIndex.txt files
+
+collection> db.collection.createIndex({ email: [1|-1]},{
+                // those are options
+                unique: true,
+                background: true,
+                name: "email",
+                sparse: true,
+                expireAfterSeconds: 3600, // TTL
+                collation: { locale: "en", strength: 2 },
+                clustered: true,
+                wildcardProjection: { "field1": 1, "field2": 0 }
+            })
+

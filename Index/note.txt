@@ -1,0 +1,26 @@
+# Index: An index in MongoDB is a structure that speeds up data retrieval on specific fields.
+# 2 main types of index are 1. Default Index, 2. Custom Index.
+
+# Without Index whole document are scanned by linearly, called COLLSCAN.
+    which we can see by giving this command "db.persons.explain().find({firstname: "taib"})".
+    it shows this output "{winningPlan: {stage: 'COLLSCAN'}}"
+
+# With Index whole document are scanned by Balanced multiway tree. called IXSCAN.
+    it shows this output "{winningPlan: {stage: 'IXSCAN'}}"
+
+# Index scan is more faster than collection scan
+
+# create index
+    db.collection.createIndex({ email: [1|-1]},<options>); // 1 is for ascending and -1 is for descending order. there more see createIndex.txt files
+    <options> are { unique: true, background: true, name: "firstName"}
+    if you use background: true , it will not block other operations
+
+# read indexes
+    db.collection.getIndexes()
+
+# delete index or indexes
+    db.collection.dropIndex({ firstName: 1})
+
+** note: you can do like this
+    db.getCollection("collection").createIndex({ firstName: 1});
+    // same for getIndexes, dropIndex

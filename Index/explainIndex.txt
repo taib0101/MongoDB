@@ -1,0 +1,6 @@
+collection> db.collection.find({ email: { $eq: "taib@gmail.com" } }).explain() // this for query operation , work by IXSCAN
+
+or
+
+collection> db.collection.find({ email: { $eq: "taib@gmail.com" } }).explain("executionStats")
+
