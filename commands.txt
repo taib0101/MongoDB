@@ -45,6 +45,9 @@ mongosh "mongodb://<host>:<port>/?serverSelectionTimeoutMS=5000"
 # SSL: mongodb://<host>:<port>/?ssl=true
 # Database Selection: mongodb://<host>:<port>/<database>
 
+# Connecting to Mongodb Atlas
+mongodb+srv://taib1:1234@taibcluster.ssdy7.mongodb.net/database?retryWrites=true&w=majority&appName=taibCluster
+
 ** if you want to set custom port , goto mongod.conf file at /etc/mongod.conf
 ** at /etc/mongod.conf update custom port from default port
 -----------------------
